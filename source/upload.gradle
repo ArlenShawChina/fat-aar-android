@@ -12,7 +12,6 @@ task javadocJar(type: Jar) {
     classifier = 'javadoc'
 }
 
-
 File secretPropsFile = project.rootProject.file('local.properties')
 if (secretPropsFile.exists()) {
     println "Found secret props file, loading props"
@@ -99,8 +98,8 @@ publishing {
 
             // The username and password we've fetched earlier
             credentials {
-                username ossrhUsername
-                password ossrhPassword
+                username 'ossrhUsername'
+                password 'ossrhPassword'
             }
         }
     }
